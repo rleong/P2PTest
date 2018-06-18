@@ -18,10 +18,13 @@ public class Client {
 	
 	public static void main(String[] args) {
 		
-		String serverAddress = JOptionPane.showInputDialog(
-	            "Enter IP Address of a machine that is\n" +
-	            "running the date service on port 9090:");
+		System.out.println("Running the Client...");
 		
+		javax.swing.SwingUtilities.invokeLater(new Runnable() {
+            public void run() {
+            	ClientWindow client = new ClientWindow("Brawler by Russell Leong");
+            }
+        });
 	}
 	
 	public static void test() {
